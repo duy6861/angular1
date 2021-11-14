@@ -1,0 +1,205 @@
+<div class="back-drop" id="divBackDrop" style="display: none;">
+
+</div>
+<div class="site-content">
+    <div class="header">
+        <div class="top-contact">
+            <div class="follow-us">Follow us on:</div>
+            <div class="icon-container">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="search-bar">
+        <div class="middle logo">
+            DXC Cuisine
+        </div>
+        <div class="middle ml-2">
+            <div class="dropdown middle">
+                <button class="btn btn-secondary dropdown-toggle middle" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    BROWSE
+                </button>
+                <div class="dropdown-menu">
+                    <div class="menu-container">
+                        <div class="mr-2">
+                            <button class="dropdown-item" type="button"><strong>Meal Type</strong></button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" type="button">Appetizers & Snacks Recipes</button>
+                            <button class="dropdown-item" type="button">Breakfast & Brunch Recipes</button>
+                            <button class="dropdown-item" type="button">Desserts</button>
+                            <button class="dropdown-item" type="button">Dinners</button>
+                            <button class="dropdown-item" type="button">Drinks</button>
+                        </div>
+                        <div style="width: 200px;">
+                            <button class="dropdown-item" type="button"><strong>Ingredient</strong></button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" type="button">Beef</button>
+                            <button class="dropdown-item" type="button">Chicken</button>
+                            <button class="dropdown-item" type="button">Pasta</button>
+                            <button class="dropdown-item" type="button">Pork</button>
+                            <button class="dropdown-item" type="button">Salmon</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle ml-2 search-box">
+            <div class="input-group">
+                <input class="form-control" type="text" name="txtSearch"  id="txtSearch" placeholder="Search" [(ngModel)]="title"
+                    aria-label="Recipient's " aria-describedby="lblSearch">
+                    <!-- <input type="text" class="form-control" [(ngModel)]="title" placeholder="Description..."> -->
+                <div class="input-group-append">
+                    <button class="input-group-text" id="lblSearch" (click)="searchClick()">
+                        <i class="fa fa-search"  aria-hidden="true" ></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="middle ml-2 cart">
+            <!-- <button type="button" id="btnCart" class="btn btn-primary middle" style="z-index: -1;" (click)="btnCart()">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                Cart items <span id="spCartNum" class="badge badge-light">0</span>
+            </button>
+            <div class="scroll-y-container">
+                <div class="wholeCartparent" id="divCart">
+                    <ul class="list-group" id="lstCartItems">
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item middle">
+                            <button class="btn btn-primary" type="button">Check Out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div style="font-size: 35%;" aria-live="assertive" aria-atomic="true" aria-relevant="text"
+        class="mdl-snackbar mdl-js-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button type="button" class="mdl-snackbar__action"></button>
+    </div>
+    <div class="popular-food">
+        <div style="font-size: 50%;">Popular Food</div>
+        <div style="font-size: 30%; text-align: justify;">
+            Hello, we're DXC Cuisine, your new premium food delivery service at DXC Vietnam. We know you're always busy.
+            No time
+            for cooking. So let us take care of that, wse're really good at it, we promise!
+        </div>
+        <div class="row" style="width: 100%;">
+            <div class="col-sm-6">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                    data-toggle="modal" data-target="#exampleModal" (click)="addClick(dataItem)"
+                    style="background-color: #99caff !important">
+                    <i class="material-icons">add</i>
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                    data-toggle="modal" data-target="#exampleModal" (click)="reLoadClick()"
+                    style="background-color: #99caff !important">
+                    <i class="fa fa-refresh"></i>
+                </button>
+            </div>
+            <div class="col-sm-6" style="text-align: right;">
+                <button class="btn btn-primary rounded-circle button-scroll" type="button" id="btnPrevious"
+                    (click)="btnPrevious()">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary rounded-circle button-scroll" type="button" id="btnNext"
+                    (click)="btnNext()">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+        </div>
+        <div class="mt-3">
+            <div class="scroll-x-container" id="ctnPopularFood">
+                <!-- Display List of Foods here -->
+                <div class="card mr-2" id="div_card0" *ngFor="let dataItem of FoodList">
+                    <img src="{{dataItem.imgSource}}" alt="Wet Burrito">
+                    <div>
+                        <h5 class="card-title1">{{dataItem.title}}</h5>
+                        <p class="card-text">{{dataItem.desc}}</p>
+                    </div>
+                    <div class="fixed">
+                      <button class="btn btn-primary buttonED" data-toggle="modal" data-target="#exampleModal"
+                      (click)="editClick(dataItem)">Edit</button>
+                      <button style="background-color:  #f44336;" class="btn btn-primary buttonED"   data-target="#exampleModal"
+                      (click)=" deleteClick(dataItem)">Delete</button>
+                    </div>
+                   </div>
+
+                <!-- End Display List of Foods here -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false"
+        data-target=".bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4  class="modal-title" id="exampleModalLabel">{{ModelTitle}}</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <app-add-edit [food]="food" *ngIf="ActivateAddEditFood"></app-add-edit>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div style="background-color: lightpink; height: 10px;">
+
+    </div>
+
+    <div class="flex-container flex-item vflex-container" style="font-size: 20px;">
+        <!-- Develop Form Add/Edit Food here -->
+
+
+
+
+
+        <!-- End Develop Form Add/Edit Food here -->
+    </div>
+
+    <div style="background-color: lightpink; height: 10px;">
+
+    </div>
+    <div class="mt-2 footer ml-5" style="display: flex;">
+        <div class="logo-and-andorid">
+            <div class="middle logo">
+                DXC Cuisine
+            </div>
+            <div class="mobile-app">
+                <img src="assets/iOs.svg" alt="iOS">
+                <img src="assets/Android.png" style="height: 40px;" alt="Android">
+            </div>
+        </div>
+        <div class="footer-contact mb-5">
+            <div style="display: table; margin:auto auto">
+                <a href="#">About DXC Cuisine</a>
+                <a href="#">Read our blog</a>
+                <a href="#">Buy gift cards</a>
+                <a href="#">Create a business account </a>
+                <a href="#">Add your restaurant</a>
+                <a href="#">Sign up to deliver</a>
+            </div>
+        </div>
+    </div>
+</div>

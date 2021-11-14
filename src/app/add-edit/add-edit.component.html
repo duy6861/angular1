@@ -1,0 +1,43 @@
+
+
+  <div class="form-group row" id="form-food" >
+    <div class="col-sm-6">
+        <label class="col-sm-12 col-form-label" aria-disabled="">Id</label>
+        <div class="col-sm-12">
+            <input disabled type="text" class="form-control" [(ngModel)]="foodItemId" placeholder="Id">
+        </div>
+        <label class="col-sm-12 col-form-label" id="lblTitle">Title</label>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="txtTitle" id="txtTitle" [(ngModel)]="title"
+                #txtTitle="ngModel" required autocomplete="off" required aria-describedby="lblName"
+                placeholder="Title...">
+            <div class="invalid-feedback" *ngIf="txtTitle.invalid && (txtTitle.dirty || txtTitle.touched)">This field is
+                required
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <label class="col-sm-12 col-form-label" required autocomplete="off">Image URL</label>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" [(ngModel)]="imgSource" placeholder="URL...">
+            <div class="invalid-feedback" *ngIf="imgSource.invalid && (imgSource.dirty || imgSource.touched)">This field is
+                required
+            </div>
+        </div>
+        <label class="col-sm-12 col-form-label" required autocomplete="off">Description</label>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" [(ngModel)]="desc" placeholder="Description...">
+            <div class="invalid-feedback" *ngIf="desc.invalid && (desc.dirty || desc.touched)">This field is required
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="refreshFood()">Clear</button>
+    <button type="button" class="btn btn-primary" (click)="addFood()" *ngIf="food.foodItemId==0">Add New Food</button>
+    <button type="button" class="btn btn-primary" (click)="editFood()" *ngIf="food.foodItemId!==0">Update Food</button>
+</div>
+

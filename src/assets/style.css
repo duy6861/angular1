@@ -1,0 +1,315 @@
+@font-face {
+    font-family: QuicksandMedium;
+    src: url(Quicksand-Medium.ttf)
+}
+
+body {
+    font-family: 'Quicksand' !important;
+    font-size: 60px !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.site-content {
+    background-color: #FAFAFA;
+    margin: 0 auto;
+    position: relative;
+    font-size: inherit !important;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fafafa;
+    font-size: inherit;
+}
+
+.header i.fa {
+    font-size: 40%;
+    color: #F5F5F5;
+    cursor: pointer;
+    display: table;
+    margin: 3px auto;
+}
+
+.top-contact {
+    display: flex;
+    padding: 0 16px 0 16px;
+    height: 50px;
+    font-size: inherit;
+}
+
+.search-bar {
+    display: flex;
+    padding: 0 16px 0 16px;
+    height: auto;
+    font-size: inherit;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+    .search-bar {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+    .logo {
+        margin-bottom: 118px !important;
+    }
+}
+.StyleH5{
+  text-align: center;
+}
+.follow-us {
+    display: table;
+    margin: auto 0;
+    font-size: 40% !important;
+}
+
+.icon-container {
+    background-color: #E0E0E0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: auto 5px
+}
+
+.middle {
+    display: table !important;
+    margin: auto 0 !important;
+    font-size: inherit;
+}
+
+.logo {
+    font-family: 'Lexend Tera';
+    font-size: 80%;
+    color: #424242;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+    .logo {
+        font-size: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .logo {
+        font-size: 40px !important;
+    }
+}
+
+.dropdown {
+    font-size: inherit !important;
+}
+
+.btn-secondary {
+    color: #212121 !important;
+    background-color: transparent !important;
+    border: 0px !important;
+    font-size: 40% !important;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+    .btn-secondary {
+        font-size: 20% !important;
+    }
+}
+
+.dropdown-menu {
+    font-size: 30% !important;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+    .dropdown-menu {
+        font-size: 20% !important;
+    }
+}
+
+.menu-container {
+    display: flex;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1000px) {
+    .menu-container {
+        display: block;
+    }
+}
+
+.form-control {
+    font-size: inherit !important;
+}
+
+.search-box {
+    font-size: 35%;
+    width: 300px;
+}
+
+.popular-food {
+    padding: 0 16px 0 16px;
+    background-color: #ffffff;
+}
+.fixed{
+position: absolute;
+  bottom: 0%;
+  width: 300px;
+}
+.card {
+    flex: 0 0 auto;
+    width: 300px;
+}
+.card div h5 {
+  padding-top: 10px;
+  padding-left: 30px;
+
+}
+.card div p {
+  padding-left: 30px;
+  overflow: scroll;
+  width: 275px;
+  height: 110px;
+
+}
+
+.card img{
+  height: 330px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+    .card {
+        width: 100% !important;
+    }
+}
+
+.scroll-x-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.scroll-y-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    height: 1px;
+    width: 1px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.btn-primary {
+    color: #ffffff !important;
+}
+
+.footer {
+    background-color: #FAFAFA;
+}
+
+.button-scroll {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 123, 255, 0.4) !important;
+    border-color: transparent !important;
+    border: 0px;
+}
+
+.button-navigator {
+    width: 100%;
+    text-align: right;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+    .button-navigator {
+        display: none;
+    }
+}
+
+.mobile-app {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-contact {
+    font-size: 30%;
+    display: table;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    left: 0px;
+}
+
+.footer-contact a {
+    display: block;
+}
+
+.logo-and-andorid {
+    width: 50%;
+}
+
+.cart {
+    font-size: 60%;
+}
+
+.img-cart-item {
+    width: 64px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.cart_item_cnt {
+    display: flex;
+}
+
+.wholeCartparent {
+    display: none;
+    width: auto;
+    position: fixed;
+    z-index: 3;
+    height: 200px;
+    white-space: nowrap;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+.div-title{
+    text-overflow: ellipsis;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: table;
+    margin: auto 0;
+}
+
+.back-drop{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(97, 97, 97, 0.5);
+    z-index: 2;
+}
+.buttonED{
+  width: 50%;
+}
+
